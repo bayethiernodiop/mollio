@@ -7,6 +7,7 @@ $payment = $mollie->payments->create(array(
     "description" => "My first API payment",
     "redirectUrl" => "https://molio.herokuapp.com",
 ));
+echo $payment->id;
 $payment = $mollie->payments->get($payment->id);
 if ($payment->isPaid()) {
     echo ("Payment received.");
