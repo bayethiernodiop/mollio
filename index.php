@@ -9,7 +9,7 @@ $payment = $mollie->payments->create(array(
 ));
 $payment = $mollie->payments->get($payment->id);
 if ($payment->isPaid()) {
-    die ("Payment received.");
+    echo ("Payment received.");
 } else {
-    die ("Payment cancelled.");
+    echo ("Payment cancelled.");
 }
