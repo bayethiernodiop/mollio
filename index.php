@@ -8,7 +8,7 @@ $payment = $mollie->payments->create(array(
     "redirectUrl" => "https://molio.herokuapp.com",
 ));
 $payment = $mollie->payments->get($payment->id);
-echo $payment->getPaymentUrl();
+header("Location: " . $payment->getPaymentUrl());
 if ($payment->isPaid()) {
     echo ("Payment received.");
 } else {
