@@ -5,7 +5,7 @@ $mollie->setApiKey("test_ueH25gaBac9NcjqSNmjeg6CvzztDUE");
 $payment = $mollie->payments->create(array(
     "amount" => 10.00,
     "description" => "My first API payment",
-    "redirectUrl" => "https://molio.herokuapp.com",
+    "redirectUrl" => "https://molio.herokuapp.com/payment-result.php",
 ));
 $payment = $mollie->payments->get($payment->id);
 header("Location: " . $payment->getPaymentUrl());
