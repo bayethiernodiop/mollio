@@ -30,4 +30,3 @@ elseif (! $payment->isOpen())
      * The payment isn't paid and isn't open anymore. We can assume it was aborted.
      */
 }
-header('x', true, 404);
