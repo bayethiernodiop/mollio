@@ -9,9 +9,4 @@ $payment = $mollie->payments->create(array(
     "webhookUrl" => "https://molio.herokuapp.com/webhook.php"
 ));
 $payment = $mollie->payments->get($payment->id);
-header("Location: " . $payment->getPaymentUrl()); 
-if ($payment->isPaid()) {
-    echo ("Payment received.");
-} else {
-    echo ("Payment cancelled.");
-}
+header("Location: " . $payment->getPaymentUrl());
